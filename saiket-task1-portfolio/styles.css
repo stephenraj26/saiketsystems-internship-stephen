@@ -1,0 +1,138 @@
+/* ---------- Theme: warm cream, forest green, coral ---------- */
+:root {
+  --cream: #fbf8f1;
+  --cream-deep: #f1ebdd;
+  --forest: #1f7a5c;
+  --forest-dark: #165a44;
+  --coral: #e4572e;
+  --coral-dark: #c9431d;
+  --ink: #1f2a24;
+  --muted: #5d6b63;
+  --line: #ddd5c3;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, .sk-logo { font-family: "Fraunces", Georgia, serif; }
+a { color: var(--forest-dark); }
+
+a:focus-visible, button:focus-visible, .form-control:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* ---------- Top bar ---------- */
+.sk-nav {
+  background: rgba(251, 248, 241, 0.96);
+  border-bottom: 1px solid var(--line);
+}
+.sk-logo { font-weight: 700; color: var(--ink); display: flex; align-items: center; gap: .5rem; }
+.sk-logo-thin { color: var(--forest); }
+.sk-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--coral); display: inline-block; }
+.sk-nav .nav-link { color: var(--ink); font-weight: 500; }
+.sk-nav .nav-link:hover { color: var(--forest); }
+
+/* ---------- Buttons ---------- */
+.sk-btn-green { background: var(--forest); color: #fff; border: 2px solid var(--forest); border-radius: 999px; padding-inline: 1.6rem; }
+.sk-btn-green:hover { background: var(--forest-dark); border-color: var(--forest-dark); color: #fff; }
+.sk-btn-line { background: transparent; color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; padding-inline: 1.6rem; }
+.sk-btn-line:hover { background: var(--ink); color: var(--cream); }
+.sk-btn-coral { background: var(--coral); color: #fff; border-radius: 999px; padding-inline: 1.1rem; }
+.sk-btn-coral:hover { background: var(--coral-dark); color: #fff; }
+
+/* ---------- Homepage ---------- */
+.sk-intro { padding: 5rem 0 6rem; }
+.sk-tag {
+  display: inline-block;
+  background: var(--cream-deep);
+  color: var(--forest-dark);
+  font-weight: 700;
+  font-size: .9rem;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+.sk-heading { font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.1; font-weight: 700; margin-bottom: 1.25rem; }
+.sk-lead { color: var(--muted); font-size: 1.2rem; max-width: 34rem; margin-bottom: 2rem; }
+
+.sk-avatar {
+  width: clamp(180px, 40vw, 260px);
+  aspect-ratio: 1;
+  margin: 0 auto 1rem;
+  border-radius: 38% 62% 55% 45% / 45% 40% 60% 55%;
+  background: var(--forest);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", serif;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 700;
+  box-shadow: 14px 14px 0 var(--coral);
+}
+.sk-avatar-note { color: var(--muted); font-weight: 500; margin-top: 1.5rem; }
+
+/* ---------- Blocks ---------- */
+.sk-block { padding: 5rem 0; }
+.sk-block-tint { background: var(--cream-deep); }
+.sk-h2 { font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: .5rem; }
+.sk-sub { color: var(--muted); margin-bottom: 2rem; }
+
+/* Tech chips */
+.sk-chip {
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: .9rem .5rem;
+  text-align: center;
+  font-weight: 700;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.sk-chip:hover { transform: translate(-3px, -3px); box-shadow: 4px 4px 0 var(--forest); }
+
+/* Project cards */
+.sk-work {
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 1.5rem;
+  height: 100%;
+  position: relative;
+}
+.sk-work h3 { font-size: 1.3rem; font-weight: 700; margin: .5rem 0; }
+.sk-work-num { font-family: "Fraunces", serif; font-size: 2.2rem; color: var(--coral); font-weight: 700; }
+.sk-soon {
+  display: inline-block;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  background: var(--cream-deep);
+  padding: .2rem .7rem;
+  border-radius: 999px;
+}
+
+/* Contact */
+.sk-links li { margin-bottom: .4rem; font-weight: 500; }
+.sk-form { background: #fff; border: 2px solid var(--ink); border-radius: 14px; padding: 1.5rem; }
+.sk-form .form-control { border: 1.5px solid var(--line); border-radius: 8px; }
+.sk-form .form-control:focus { border-color: var(--forest); box-shadow: 0 0 0 .2rem rgba(31, 122, 92, .2); }
+
+/* Footer */
+.sk-footer { background: var(--ink); color: #cfd8d2; padding: 1.25rem 0; font-size: .95rem; }
+
+@media (max-width: 575.98px) {
+  .sk-intro { padding: 3rem 0 4rem; }
+  .sk-block { padding: 3.5rem 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .sk-chip { transition: none; }
+}
