@@ -1,0 +1,8 @@
+{
+  "name": "task4-rest-api",
+  "version": "1.0.0",
+  "description": "Basic REST API with Node.js and Express (CRUD for a User entity)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^5.1.0" }
+}

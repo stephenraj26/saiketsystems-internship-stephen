@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f1f5f9;
+  color: #1c2733;
+  line-height: 1.5;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+h1 { margin: 0; }
+h2 { margin-top: 0; font-size: 1.2rem; }
+.sub { color: #5f6f81; margin: .25rem 0 1.5rem; }
+
+.panel { background: #fff; border: 1px solid #d9e1ec; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 120px; gap: 1rem; }
+label { display: block; font-weight: 600; font-size: .92rem; margin-bottom: .3rem; }
+input {
+  width: 100%; padding: .65rem .75rem;
+  border: 1.5px solid #cfd8e3; border-radius: 8px; font-size: 1rem;
+}
+input:focus { outline: none; border-color: #0f766e; box-shadow: 0 0 0 3px rgba(15, 118, 110, .2); }
+
+.message { min-height: 1.4rem; margin: .75rem 0 0; font-weight: 600; }
+.message.error { color: #c4311f; }
+.message.ok { color: #1a7f4b; }
+
+.actions { display: flex; gap: .5rem; margin-top: .5rem; }
+.btn {
+  background: #0f766e; color: #fff; border: 1.5px solid #0f766e;
+  border-radius: 8px; padding: .6rem 1.1rem; font-size: 1rem; font-weight: 600; cursor: pointer;
+}
+.btn:hover { opacity: .88; }
+.btn-plain { background: transparent; color: #0f766e; }
+.btn-danger { background: transparent; color: #c4311f; border-color: #c4311f; }
+.btn-small { padding: .3rem .7rem; font-size: .9rem; }
+button:focus-visible { outline: 3px solid #f2a900; outline-offset: 2px; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 520px; }
+th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #e5ebf2; }
+th { font-size: .85rem; color: #5f6f81; text-transform: uppercase; letter-spacing: .04em; }
+td.actions-cell { display: flex; gap: .4rem; }
+.count { color: #5f6f81; font-weight: 400; font-size: 1rem; }
+.empty { color: #5f6f81; }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}

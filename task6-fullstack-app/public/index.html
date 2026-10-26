@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>User Management System</h1>
+    <p class="sub">Add, view, update and delete user profiles. Data is stored in a database.</p>
+
+    <section class="panel" aria-labelledby="formTitle">
+      <h2 id="formTitle">Add a user</h2>
+      <form id="userForm" novalidate>
+        <input type="hidden" id="userId">
+        <div class="grid">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" autocomplete="off">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="off">
+          </div>
+          <div>
+            <label for="age">Age</label>
+            <input id="age" type="number" min="0" max="120">
+          </div>
+        </div>
+        <p id="message" class="message" role="status"></p>
+        <div class="actions">
+          <button type="submit" id="saveBtn" class="btn">Add user</button>
+          <button type="button" id="cancelBtn" class="btn btn-plain" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>All users <span id="count" class="count"></span></h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Name</th><th>Email</th><th>Age</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="userRows"></tbody>
+        </table>
+      </div>
+      <p id="empty" class="empty" hidden>No users yet. Add the first one above.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
